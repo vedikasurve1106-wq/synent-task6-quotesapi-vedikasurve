@@ -1,0 +1,251 @@
+/* Google Fonts are imported in HTML */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+
+    background: linear-gradient(
+        -45deg,
+        #f7b267,
+        #f79d65,
+        #f4845f,
+        #f8c8dc,
+        #ffe8d6
+    );
+
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.container {
+    width: 100%;
+    max-width: 750px;
+}
+
+.quote-card {
+    animation: cardAppear 1s ease;
+    background: rgba(255, 255, 255, 0.18);
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    border: 1px solid rgba(255,255,255,0.25);
+
+    border-radius: 28px;
+
+    padding: 50px;
+
+    box-shadow: 0 20px 45px rgba(0,0,0,0.15);
+
+    text-align: center;
+
+    transition: transform .4s ease,
+                box-shadow .4s ease;
+}
+
+.quote-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow: 0 28px 55px rgba(0,0,0,0.18);
+}
+
+h1 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 2.7rem;
+
+    color: #553b34;
+
+    margin-bottom: 12px;
+}
+
+.subtitle {
+    color: #6d4c41;
+
+    font-size: 1rem;
+
+    margin-bottom: 40px;
+}
+
+#quote {
+    font-family: "Playfair Display", serif;
+
+    font-size: 1.8rem;
+
+    line-height: 1.8;
+
+    color: #402b24;
+
+    margin-bottom: 30px;
+
+    max-width: 600px;
+    
+margin: 0 auto 30px;
+
+    transition: opacity .6s ease, transform .6s ease;
+}
+
+#author {
+    font-style: italic;
+
+    color: #795548;
+
+    font-size: 1.1rem;
+
+    margin-bottom: 45px;
+
+    transition: opacity .6s ease, transform .6s ease;
+}
+
+.buttons {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 18px;
+
+    flex-wrap: wrap;
+}
+
+button {
+    padding: 15px 30px;
+
+    border: none;
+
+    border-radius: 50px;
+
+    background: #f4845f;
+
+    color: white;
+
+    font-size: 1rem;
+
+    cursor: pointer;
+
+    transition: all .3s ease;
+}
+
+button:hover {
+    background: #ef6c57;
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 12px 25px rgba(0,0,0,.15);
+}
+
+button:active {
+    transform: scale(.98);
+}
+
+@media (max-width: 768px) {
+
+    .quote-card {
+        padding: 35px 25px;
+    }
+
+    h1 {
+        font-size: 2.1rem;
+    }
+
+    #quote {
+        font-size: 1.5rem;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
+    }
+
+}
+/* Floating Blobs */
+
+.blob{
+    position:fixed;
+    border-radius:50%;
+    filter:blur(120px);
+    opacity:.55;
+    z-index:-1;
+    animation:float 18s ease-in-out infinite;
+}
+
+.blob1{
+
+    width:380px;
+    height:380px;
+
+    top:-120px;
+    left:-120px;
+
+    background:#ffd6ba;
+
+}
+
+.blob2{
+
+    width:420px;
+    height:420px;
+
+    right:-150px;
+    bottom:-150px;
+
+    background:#f8c8dc;
+
+    animation-delay:5s;
+
+}
+
+.blob3{
+
+    width:320px;
+    height:320px;
+
+    left:60%;
+    top:35%;
+
+    background:#ffe8d6;
+
+    animation-delay:10s;
+
+}
+@keyframes float{
+
+    0%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-30px);
+    }
+
+    100%{
+        transform:translateY(0px);
+    }
+
+}
